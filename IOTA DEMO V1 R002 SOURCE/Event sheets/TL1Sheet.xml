@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TL1Sheet</name>
+    <events>
+        <variable constant="0" name="Score" sid="176676000662543" static="0" type="number">0</variable>
+        <variable constant="0" name="WalkingLeft" sid="154925320177274" static="0" type="number">0</variable>
+        <variable constant="0" name="WalkingRight" sid="260145424064223" static="0" type="number">0</variable>
+        <event-block sid="156783771601639">
+            <conditions>
+                <condition id="2" name="Key is down" sid="165528794367297" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="696733302218495" type="System">
+                    <param id="0" name="Variable">WalkingRight</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="767162457495368" type="PlayerCharacter">
+                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="991028693115945">
+            <conditions>
+                <condition id="4" name="On finished" sid="552610168931094" type="PlayerCharacter">
+                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="971335994815114" type="System">
+                    <param id="0" name="Variable">WalkingRight</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="856839180040747" type="PlayerCharacter">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-17" name="Move forward" sid="498712414627246" type="PlayerCharacter">
+                    <param id="0" name="Distance">25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="844035996864597">
+            <conditions>
+                <condition id="3" name="On key released" sid="356632294032995" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="315684891783786" type="System">
+                    <param id="0" name="Variable">WalkingRight</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="2" name="Stop" sid="340969773029958" type="PlayerCharacter" />
+            </actions>
+        </event-block>
+        <comment>Don&apos;t worry future me, the above is correct</comment>
+        <event-block sid="534628728441723">
+            <conditions>
+                <condition id="2" name="Key is down" sid="610919250625801" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="398996042935549" type="System">
+                    <param id="0" name="Variable">WalkingLeft</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="893472328172474" type="PlayerCharacter">
+                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="549962046002217">
+            <conditions>
+                <condition id="4" name="On finished" sid="405392234870067" type="PlayerCharacter">
+                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="475262788033471" type="System">
+                    <param id="0" name="Variable">WalkingLeft</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="986770343903777" type="PlayerCharacter">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-17" name="Move forward" sid="634121594281203" type="PlayerCharacter">
+                    <param id="0" name="Distance">-25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="938196482922299">
+            <conditions>
+                <condition id="3" name="On key released" sid="600606179605311" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="945703161734702" type="System">
+                    <param id="0" name="Variable">WalkingLeft</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="2" name="Stop" sid="942931242207194" type="PlayerCharacter" />
+            </actions>
+        </event-block>
+        <event-block sid="179742815692618">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="470720331934091" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="667372992566709" type="PlayerCharacter">
+                    <param id="0" name="Instance variable">onFloor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="958452028148427" type="PlayerCharacter">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="233205445252351" type="PlayerCharacter">
+                    <param id="0" name="Instance variable">onFloor</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769075929307016">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="259301860339528" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="869504132665996" type="System">
+                    <param id="0" name="Variable">WalkingRight</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="640773210906433" type="System">
+                    <param id="0" name="Variable">WalkingLeft</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="482349563725702" type="Audio">
+                    <param id="0" name="Audio file">Chill_Wave</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="480865811328009" type="System">
+                    <param id="0" name="Seconds">5.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="323871118115779" type="PreLevelDiag1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="529862365913243" type="PreLevelDiag2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="197088671718844" type="System">
+                    <param id="0" name="Seconds">5.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="161915308109806" type="PreLevelDiag2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="376245035890762" type="PreLevelDiag3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="204733271019006" type="System">
+                    <param id="0" name="Seconds">5.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="373685441549657" type="PreLevelDiag3">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="824698312686062" type="MysteriousPerson">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="286858350551508" type="TextPlaceholder">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="707690908291751">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="605728455492751" type="PlayerCharacter" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="215293462541979" type="PlayerCharacter">
+                    <param id="0" name="Instance variable">onFloor</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="280640840100139">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="597751012964977" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="545103973410512" type="Score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="898050503571700">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="617466662511862" type="PlayerCharacter">
+                    <param id="0" name="Object">Coin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="433383815110587" type="Coin" />
+                <action id="-10" name="Add to" sid="926202677837261" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="643667252080593">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="555569478461802" type="PlayerCharacter">
+                    <param id="0" name="Object">Coin3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="229662398379186" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="825700255232443" type="Coin3" />
+            </actions>
+        </event-block>
+        <event-block sid="846767802141369">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="849797739516996" type="PlayerCharacter">
+                    <param id="0" name="Object">Coin5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="313796328271537" type="Coin5" />
+                <action id="-10" name="Add to" sid="815394399811470" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="717494426500373">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="780257405466092" type="PlayerCharacter">
+                    <param id="0" name="Object">Coin6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="881909522277806" type="Coin6" />
+                <action id="-10" name="Add to" sid="414244397010721" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="516211940486742">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="914899618664918" type="PlayerCharacter">
+                    <param id="0" name="Object">Coin7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="117576761037918" type="Coin7" />
+                <action id="-10" name="Add to" sid="664771452203051" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260363436242782">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="877857358643955" type="PlayerCharacter">
+                    <param id="0" name="Object">Coin8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="431795186188974" type="Coin8" />
+                <action id="-10" name="Add to" sid="787744817700451" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
