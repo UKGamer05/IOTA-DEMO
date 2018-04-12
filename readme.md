@@ -1,4 +1,4 @@
-IOTA DEMO V1 R001
+IOTA DEMO V1 R003
 
 SCROLL DOWN!!!
 
@@ -17,3 +17,12 @@ R002:
 .Started Changelog
 .Added Platforms
 .Ajusted Collisions
+
+R003:
+.Added enemies
+.Added Game Over
+.Made an actual level
+.Programmed enemy AI, will walk towards you and stop once they hit you.
+.Added drop down function
+.Added more dialog
+.Added a lot
